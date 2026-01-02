@@ -15,7 +15,8 @@ function App() {
   const fetchContacts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/contacts');
+      const API_URL = process.env.REACT_APP_API_URL || 'https://contactapi.rohitcodes.tech/api/contacts';
+      const response = await fetch(API_URL);
       const data = await response.json();
       setContacts(data);
     } catch (error) {

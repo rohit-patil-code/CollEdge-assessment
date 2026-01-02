@@ -14,7 +14,7 @@ const ContactForm = ({ onContactAdded }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
 
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contacts';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://contactapi.rohitcodes.tech/api/contacts';
 
   const validateEmail = (email) => {
     if (!email) return true; // Email is optional

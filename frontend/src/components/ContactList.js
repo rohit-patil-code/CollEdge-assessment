@@ -3,7 +3,7 @@ import axios from 'axios';
 import './ContactList.css';
 
 const ContactList = ({ contacts, loading, onContactDeleted }) => {
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contacts';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://contactapi.rohitcodes.tech/api/contacts';
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this contact?')) {
